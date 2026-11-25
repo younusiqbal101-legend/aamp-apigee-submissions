@@ -1,0 +1,8 @@
+{
+  "mode": "new",
+  "name": "test-target",
+  "host": "example.com",
+  "port": "443",
+  "protocol": "https",
+  "sslEnabled": true
+}

@@ -1,0 +1,41 @@
+openapi: 3.0.3
+info:
+  title: Shipment API
+  version: v1
+  description: APIs to manage shipment operations.
+servers:
+  - url: https://shipment.dev.internal.company.com/shipment/v1
+paths:
+  /shipments:
+    get:
+      operationId: listShipments
+      summary: List shipments
+      responses:
+        "200":
+          description: OK
+    post:
+      operationId: createShipment
+      summary: Create a shipment
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        "201":
+          description: Created
+  /shipments/{shipmentId}:
+    get:
+      operationId: getShipment
+      summary: Get a shipment
+      parameters:
+        - name: shipmentId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+        "404":
+          description: Not found
