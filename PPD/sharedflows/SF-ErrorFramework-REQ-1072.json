@@ -1,0 +1,5 @@
+{
+  "name": "SF-ErrorFramework",
+  "placement": "Proxy Endpoint Request PreFlow",
+  "calloutPolicyName": "SF-ErrorFramework"
+}

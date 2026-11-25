@@ -1,0 +1,8 @@
+{
+  "mode": "existing",
+  "name": "mocktarget",
+  "host": "",
+  "port": "",
+  "protocol": "",
+  "sslEnabled": false
+}

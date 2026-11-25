@@ -15,4 +15,5 @@ If a file name is already taken, the new file is named `<name>-<request-id>.json
 | Request ID | Submitted | Environment | API name | Proxy | Target server | Shared flows | KVM |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | REQ-1071 | 2026-11-25 | eval | developer-portal-demo-ap | `proxy/developer-portal-demo-ap.json` | `targetservers/mocktarget.json` | `sharedflows/SF-ErrorFramework.json` | — |
+| REQ-1072 | 2026-11-25 | eval | developer-portal-demo-ap | `proxy/developer-portal-demo-ap-REQ-1072.json` | `targetservers/mocktarget-REQ-1072.json` | `sharedflows/SF-ErrorFramework-REQ-1072.json` | — |
 <!-- submissions:end -->
