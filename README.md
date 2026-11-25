@@ -1,16 +1,17 @@
 ﻿# aamp-apigee-submissions
 
-Holds Apigee configuration submitted from the aamp portal. Submitting a request
-writes its files here instead of changing Apigee directly.
+Configuration submitted from the aamp portal. Each submission adds one row to the table below.
 
-## Layout
+Folders:
 
-    <environment>/<api-name>/<request-id>/
-      proxy/          API proxy bundle
-      kvm/            key value map entries
-      targetservers/  target server definitions
-      sharedflows/    shared flows used by the proxy
+- `proxy/` one JSON file per API proxy (spec, policies, base path, target server). Jenkins builds the zip from these.
+- `kvm/` one JSON file per key value map.
+- `sharedflows/` one JSON file per shared flow the proxy uses.
+- `targetservers/` one JSON file per target server.
 
-Example: test-env/shipment-api/REQ-1048/proxy/
+If a file name is already taken, the new file is named `<name>-<request-id>.json`.
 
-This repository is a test layout. The folders contain placeholder files only.
+<!-- submissions:start -->
+| Request ID | Submitted | Environment | API name | Proxy | Target server | Shared flows | KVM |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+<!-- submissions:end -->
