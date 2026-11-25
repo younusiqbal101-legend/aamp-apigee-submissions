@@ -16,4 +16,5 @@ If a file name is already taken, the new file is named `<name>-<request-id>.json
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | REQ-1071 | 2026-11-25 | eval | developer-portal-demo-ap | `proxy/developer-portal-demo-ap.json` | `targetservers/mocktarget.json` | `sharedflows/SF-ErrorFramework.json` | — |
 | REQ-1072 | 2026-11-25 | eval | developer-portal-demo-ap | `proxy/developer-portal-demo-ap-REQ-1072.json` | `targetservers/mocktarget-REQ-1072.json` | `sharedflows/SF-ErrorFramework-REQ-1072.json` | — |
+| REQ-1073 | 2026-11-25 | eval | developer-portal-demo-ap-new | `proxy/developer-portal-demo-ap-new.json` | `targetservers/mocktarget.json` | — | — |
 <!-- submissions:end -->
