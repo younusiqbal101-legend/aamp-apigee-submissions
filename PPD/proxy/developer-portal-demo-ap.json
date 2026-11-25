@@ -1,0 +1,60 @@
+{
+  "requestId": "REQ-1071",
+  "apiName": "developer-portal-demo-ap",
+  "displayName": "Developer Portal Demo API",
+  "description": "Sample API for testing the portal",
+  "version": "1.0.0",
+  "basePath": "/ses",
+  "consumer": "Internal",
+  "authType": "API Key",
+  "authHeader": "x-api-key",
+  "specFileName": "sample-openapi.yaml",
+  "specContent": "openapi: 3.0.3\r\ninfo:\r\n  title: Developer Portal Demo API\r\n  version: 1.0.0\r\n  description: Sample API for testing the portal\r\n\r\nservers:\r\n  - url: https://api.example.com\r\n\r\npaths:\r\n  /hello:\r\n    get:\r\n      summary: Hello endpoint\r\n      responses:\r\n        \"200\":\r\n          description: Successful response",
+  "targetServer": "mocktarget",
+  "policies": {
+    "quota": {
+      "enabled": true,
+      "policyName": "Quota-Default",
+      "displayName": "Quota Policy",
+      "limit": 1000,
+      "timeUnit": "day",
+      "identifier": "Developer App"
+    },
+    "spikeArrest": {
+      "enabled": true,
+      "policyName": "SpikeArrest-Default",
+      "displayName": "Spike Arrest Policy",
+      "rate": 100,
+      "timeUnit": "pm"
+    },
+    "jsonThreatProtection": {
+      "enabled": true,
+      "policyName": "JSON-Threat-Protection",
+      "displayName": "JSON Threat Protection",
+      "maxDepth": 10,
+      "maxEntries": 100,
+      "maxStringLength": 5000
+    },
+    "cors": {
+      "enabled": true,
+      "policyName": "CORS-Policy",
+      "displayName": "CORS Policy",
+      "origins": "https://example.com",
+      "methods": "GET, POST, PUT, DELETE, OPTIONS",
+      "headers": "Content-Type, Authorization, x-api-key"
+    },
+    "sharedFlows": [
+      {
+        "name": "SF-ErrorFramework",
+        "placement": "Proxy Endpoint Response PreFlow",
+        "calloutPolicyName": "SF-ErrorFramework"
+      }
+    ],
+    "sharedFlowMode": "existing",
+    "newSharedFlow": {
+      "name": "",
+      "displayName": "",
+      "bundleFileName": ""
+    }
+  }
+}
